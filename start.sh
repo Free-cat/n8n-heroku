@@ -61,11 +61,11 @@ else
 	echo "invalid url arg"
 fi
 
-# parse REDIS_URL if present
-if [ "$REDIS_URL" ]
+# parse REDISCLOUD_URL if present
+if [ "$REDISCLOUD_URL" ]
 then 
 	echo "redis config detected"
-	PREFIX="N8N_REDIS_" parse_url "$REDIS_URL"
+	PREFIX="N8N_REDIS_" parse_url "$REDISCLOUD_URL"
 	# Separate host and port    
 	N8N_REDIS_HOST="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,:.*,,g')"
 	N8N_REDIS_PORT="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')"
