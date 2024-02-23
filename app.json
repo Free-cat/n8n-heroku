@@ -20,6 +20,10 @@
       "description": "Heroku made a change so SSL is required to connect to Postgres",
       "value": "no-verify"
     },
+    "DB_POSTGRESDB_SSL_ENABLED": {
+      "description": "Introduced since n8n@1.11.1 to connect to Postgres with SSL.",
+      "value": "true"
+    },
     "NODE_TLS_REJECT_UNAUTHORIZED": {
       "description": "Because Heroku SSL is self signed, SSL fails if this is not set to 0",
       "value": "0"
